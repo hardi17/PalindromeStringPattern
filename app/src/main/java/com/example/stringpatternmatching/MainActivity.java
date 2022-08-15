@@ -70,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if(input.contains("\n")){
              input =  input.replaceAll("\n","");
-                Log.d("111111111111", input);
             }
-            Log.d("222222222222222", input);
             if (StringValidOrNOt.isValidOrNotLowecase(input)) {
                 doValidatePattern(input);
                 Log.d("*********", input);

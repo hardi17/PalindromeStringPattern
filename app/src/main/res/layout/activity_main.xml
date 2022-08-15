@@ -1,108 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp"
+        android:fillViewport="true"
         tools:context=".MainActivity">
-
-        <EditText
-            android:id="@+id/edittext_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/dp10"
-            android:background="@color/yellow"
-            android:gravity="center"
-            android:hint="@string/hintText"
-            android:importantForAutofill="no"
-            android:padding="@dimen/dp15"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dp20"
-            tools:ignore="SpUsage" />
-
-
-        <Button
-            android:id="@+id/btn_click"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/dp20"
-            android:background="@color/black"
-            android:gravity="center_vertical"
-            android:padding="@dimen/dp10"
-            android:text="@string/clickHere"
-            android:textSize="@dimen/dp15" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:fitsSystemWindows="true"
+            android:scrollbars="vertical">
 
-            <TextView
-                android:id="@+id/textview_result"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="@dimen/dp20"
-                android:text="@string/listOfValidPattern"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dp20"
-                android:textStyle="italic" />
-
-            <TextView
-                android:id="@+id/tv_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textSize="@dimen/dp20"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView_validPattern"
+            <EditText
+                android:id="@+id/edittext_value"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/btn_clear"
-                android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/dp10"
-                android:scrollbars="vertical" />
-
-            <TextView
-                android:id="@+id/tv_noData"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/noDataFound"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp10"
+                android:background="@color/yellow"
+                android:gravity="center"
+                android:hint="@string/hintText"
+                android:importantForAutofill="no"
+                android:padding="@dimen/dp15"
                 android:textColor="@color/black"
                 android:textSize="@dimen/dp20"
-                android:textStyle="italic"
-                android:visibility="gone" />
+                tools:ignore="SpUsage" />
+
+
+            <Button
+                android:id="@+id/btn_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp20"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp10"
+                android:text="@string/clickHere"
+                android:textSize="@dimen/dp15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp20"
+                    android:text="@string/listOfValidPattern"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp20"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp20"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginBottom="@dimen/dp5"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_validPattern"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scrollIndicators="none"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/tv_noData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/noDataFound"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp20"
+                    android:textStyle="italic"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
 
             <Button
                 android:id="@+id/btn_clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
                 android:layout_marginBottom="@dimen/dp5"
                 android:background="@color/black"
                 android:padding="@dimen/dp10"
+                android:layout_gravity="center"
                 android:text="@string/clearData"
                 android:textSize="@dimen/dp15" />
-
-        </RelativeLayout>
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </layout>
 
 
