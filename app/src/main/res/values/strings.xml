@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">StringPatternMatching</string>
+
+    <!-- MainActivity string-->
+    <string name="hintText">Hello String!!!!!</string>
+    <string name="clickHere">Click Here</string>
+    <string name="clearData">Clear Data</string>
+    <string name="noDataFound">Oops no data found!!!</string>
+    <string name="listOfValidPattern">: List Of Valid Pattern :</string>
+</resources>

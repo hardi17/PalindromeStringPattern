@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_patternStr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:background="@color/teal_700"
+            android:padding="@dimen/dp12"
+            android:text="Example"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp15"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</layout>
