@@ -11,7 +11,7 @@ String Patter matchingv :
     A pattern occurs within some of the strings, whereby a pair of two different letters are followed
     by the reverse of that pair, making short sequences of four characters, e.g. “xaax” or “bccb”.
 
-## Contributing to Learn JAVA
+## Contributing to Learn Unit test in JAVA
 
 Just make pull request. You are in!
 
